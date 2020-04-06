@@ -13,9 +13,90 @@
   <button onclick="strictComparison();">Strict comparison</button>
   <button onclick="blockScopeProblem();">Block-level scope problem</button>
   <button onclick="blockScopeFix();">Block-level scope resolution</button>
+
   <script>
     'use strict';
-    
+
+    //Using switch statement
+
+    function simpleSwitch() {
+      let productId = prompt("Enter your product name");
+
+      switch (productId) {
+        case "1":
+          console.log("Product 1");
+          break;
+        case "2":
+          console.log("Product 2");
+          break;
+        default:
+          console.log("Unkonwn product");
+          break;
+      }
+    }
+
+    simpleSwitch();
+
+    //Using switch statement with multiple statements
+
+    function multipleCase() {
+      let color = prompt("What color do you sea?");
+
+      switch (color) {
+        case "Red":
+        case "Pink":
+          console.log("the color is red");
+          break;
+        case "Blue":
+        case "Light Blue":
+        case "Dark Blue":
+          console.log("The color is blue");
+          break;
+        case "Gray":
+        case "Grey":
+          console.log("The color is grey");
+          break;
+        default:
+          console.log("Uknown color");
+          break;
+      }
+    }
+
+    multipleCase();
+
+    //Rewrite the "switch" into an "if"
+
+    switch (browser) {
+      case 'Edge':
+        alert("You've got the Edge!");
+        break;
+
+      case 'Chrome':
+      case 'Firefox':
+      case 'Safari':
+      case 'Opera':
+        alert('Okay we support these browsers too');
+        break;
+
+      default:
+        alert('We hope that this page looks ok!');
+    }
+
+    function browserType(browser) {
+      if (browser === 'Edge') {
+        alert("You've got the Edge!");
+      } else if (browser === 'Chrome'
+        || browser === 'Firefox'
+        || browser === "Safari"
+        || browser === "Opera") {
+        alert('Okay we support these browsers too');
+      } else {
+        alert('We hope that this page looks ok!');
+      }
+    }
+
+    browserType("Chrome");
+
   </script>
 </body>
 
