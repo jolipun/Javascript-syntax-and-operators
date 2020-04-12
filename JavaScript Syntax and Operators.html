@@ -97,6 +97,56 @@
 
     browserType("Chrome");
 
+    //Using for/in loop
+
+    function personalAttributes() {
+      let person = {
+        name: 'Sarah',
+        surname: 'Ryan',
+        age: 18,
+        status: 'stutent',
+        fullName: function () {
+          return this.name + this.surname;
+        }
+      };
+      for (const key in person) {
+        console.log("'" + key + "'" + " = " + person[key]);
+      }
+    }
+    personalAttributes();
+
+    //Using for/of loop for arrays
+
+    const array1 = ['a', 'b', 'c'];
+    for (const element of array1) {
+      console.log(element);
+    }
+
+    const iterable = [10, 20, 30];
+    for (let number of iterable) {
+      number += 1;
+      console.log(number);
+    }
+
+    //Using for/of loop for Strings
+
+    let name = "Karolis";
+    for (let word of name) {
+      console.log(word);
+    }
+
+    //Using break and continue
+
+    for (i = 0; i < 10; i++) {
+      if (i === 3) { break }
+      console.log(i);
+    }
+
+    for (i = 0; i < 10; i++) {
+      if (i === 3) { continue }
+      console.log(i);
+    }
+
   </script>
 </body>
 
