@@ -162,7 +162,7 @@
     let age;
     function ageCheck(age) {
       if (age >= 14 && age <= 90);
-        console.log("You are allowed to enter");
+      console.log("You are allowed to enter");
     }
 
     ageCheck(17);
@@ -175,20 +175,43 @@
     function ageCheck(age) {
       if (!(age >= 14 && age <= 90))
         console.log("You can't go in");
-        
+
     }
 
     ageCheck(3);
 
- 
+
     let age;
     function ageCheck(age) {
       if (age < 14 && age < 90)
         console.log("You can't go in");
-        
+
     }
 
-    ageCheck(3);   
+    ageCheck(3);
+
+    /*     Check the login
+        Write the code which asks for a login with prompt. */
+
+    //Checking what the visitor enters in the prompt for a username
+
+    function checkUsername() {
+      let username = prompt();
+      if (username === "Admin") {
+        alert("checkPassword");
+      } else if (username === "" || username === keyPress(event)) {
+        alert("Canceled");
+      } else {
+        alert("I don't know you");
+      }
+    }
+
+    //Checking Esc key press
+    function keyPress(event) {
+      event.key === "Escape";
+    }
+    debugger
+    checkUsername();
 
   </script>
 </body>

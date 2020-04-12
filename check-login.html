@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        function isCorrectName(username) {
+            return (username === "Admin");
+        }
+
+        function isCorrectPassword(password) {
+            return (password === "TheMaster");
+        }
+
+        function isEmptyOrCanceledName(username) {
+            return (username === "" || username === null);
+        }
+
+        function isEmptyOrCanceledPassword(password) {
+            return (password === "" || password === null);
+        }
+      
+        function checkPassword() {
+            let password = prompt("Enter your password");
+            if (isCorrectPassword(password)) {
+                alert('Welcome!')
+            } else if (isEmptyOrCanceledPassword(password)) {
+                alert("Canceled")
+            } else {
+                alert('Wrond password')
+            }
+        }
+
+        function checkUsername() {
+            let username = prompt("Enter your username");
+            if (isCorrectName(username)) {
+                checkPassword();
+            } else if (isEmptyOrCanceledName(username)) {
+                alert("Canceled");
+            } else {
+                alert("I don't know you");
+            }
+        }
+
+        checkUsername();    
+    </script>
+</body>
+
+</html>
