@@ -14,37 +14,33 @@
             return (password === "TheMaster");
         }
 
-        function isEmptyOrCanceledName(username) {
-            return (username === "" || username === null);
-        }
-
-        function isEmptyOrCanceledPassword(password) {
-            return (password === "" || password === null);
+        function isEmptyOrCanceled(input) {
+            return (input === "" || input === null);
         }
       
         function checkPassword() {
             let password = prompt("Enter your password");
             if (isCorrectPassword(password)) {
                 alert('Welcome!')
-            } else if (isEmptyOrCanceledPassword(password)) {
+            } else if (isEmptyOrCanceled(password)) {
                 alert("Canceled")
             } else {
-                alert('Wrond password')
+                alert('Wrong password')
             }
         }
 
-        function checkUsername() {
+        function checkLoginDetails() {
             let username = prompt("Enter your username");
             if (isCorrectName(username)) {
                 checkPassword();
-            } else if (isEmptyOrCanceledName(username)) {
+            } else if (isEmptyOrCanceled(username)) {
                 alert("Canceled");
             } else {
                 alert("I don't know you");
             }
         }
 
-        checkUsername();    
+        checkLoginDetails();    
     </script>
 </body>
 
