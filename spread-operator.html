@@ -28,6 +28,44 @@
         console.log(newFruitBasket);
         console.log(newFruitBasketSlice);
 
+        //Copy array of objects
+
+        let person = [
+            {
+                name: "John",
+                surname: "Willy",
+                age: 89,
+                status: "married"
+            },
+            {
+                name: "Simon",
+                surname: "Newman",
+                age: 23,
+                status: "unmarried"
+            },
+            {
+                name: "Jack",
+                surname: "Stanley",
+                age: 3,
+                status: "kid"
+            }
+        ];
+
+        function copyArrayOfObjects() {
+            let personDuplicate = [...person];
+            personDuplicate[2].age = 13;
+
+            console.log(person);
+            console.log(personDuplicate);
+        }
+
+        copyArrayOfObjects();
+
+
+
+
+
+
     </script>
 </body>
 
