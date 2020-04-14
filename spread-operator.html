@@ -16,6 +16,18 @@
 
         stringToArray(); // ["M", "a", "k", "a", "r", "o", "n", "a", "i"]
 
+        //Copy array
+
+        let fruitBasket = ["banana", "Kiwi", "apple"];
+        let newFruitBasket = [...fruitBasket];
+        let newFruitBasketSlice = fruitBasket.slice(0);
+
+        newFruitBasket[0] = "peach";
+        newFruitBasket.push("blueberry", "meleon");
+
+        console.log(newFruitBasket);
+        console.log(newFruitBasketSlice);
+
     </script>
 </body>
 
