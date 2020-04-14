@@ -61,6 +61,33 @@
 
         copyArrayOfObjects();
 
+        //Concatenting two arrays
+
+        let personNewCustomer = [
+            {
+                name: "Carlos",
+                surname: "Rodrigo",
+                age: 45,
+                status: "married"
+            },
+            {
+                name: "Antonio",
+                surname: "Lorenzo",
+                age: 23,
+                status: "unmarried"
+            },
+        ]
+
+        function concatenatedPersonArray() {
+            let allPeople = person.concat(personNewCustomer);
+            console.log(allPeople.length);
+
+            let allPeopleSpread = [...person, ...personNewCustomer];
+            console.log(allPeopleSpread);
+        }
+
+        concatenatedPersonArray();
+
 
 
 
