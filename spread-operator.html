@@ -101,6 +101,24 @@
 
         spreadInConstructor();
 
+        // Passing parameters to a function
+
+        function spreadForBasket() {
+            basket(1,2,3);
+
+            let numbers = [1,2,3];
+            basket(...numbers);
+        }
+        
+        function basket(a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log("");
+        }
+
+        spreadForBasket();
+
     </script>
 </body>
 
