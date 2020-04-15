@@ -88,10 +88,18 @@
 
         concatenatedPersonArray();
 
+        // Use with 'new'
 
+        function spreadInConstructor() {
+            let date = new Date(2020, 02, 15);
+            console.log(date);
 
+            let dateArray = [2020, 11, 20];
+            date = new Date(...dateArray);
+            console.log(date);
+        }
 
-
+        spreadInConstructor();
 
     </script>
 </body>
